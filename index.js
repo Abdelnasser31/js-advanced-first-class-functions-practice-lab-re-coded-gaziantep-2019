@@ -17,3 +17,13 @@ function driversByRevenue(driver) {
     return a.revenue - b.revenue;
   })
 }
+function driversByName(dirver) {
+  const driverCopy = [...driver];
+  return driverCopy.sort(function(a,b) {
+    return a.name.localeCompare(b.name);
+  })
+}
+
+function totalRevenue(driver) {
+  return driver.reduce((acc,cur) => acc + cur.revenue,0);
+}
